@@ -8,6 +8,9 @@ public class Order {
 	private Date orderDate;
 	private String orderItem;
 	private Customer customer;
+	public Order() {
+		
+	}
 	public Order(Long orderId, Date orderDate, String orderItem,Customer customer) {
 		super();
 		this.orderId = orderId;

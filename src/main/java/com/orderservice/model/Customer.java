@@ -4,6 +4,9 @@ public class Customer {
 
 	private String customerName;
 	private String customerAddress;
+	public Customer() {
+		
+	}
 	public Customer(String customerName, String customerAddress) {
 		super();
 		this.customerName = customerName;
