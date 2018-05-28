@@ -1,5 +1,8 @@
 package com.orderservice.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 public class Customer {
 
 	private String customerName;

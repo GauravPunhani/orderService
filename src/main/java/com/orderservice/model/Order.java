@@ -2,16 +2,22 @@ package com.orderservice.model;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="orders")
 public class Order {
 
-	private Long orderId;
+	@Id
+	private String orderId;
 	private Date orderDate;
 	private String orderItem;
 	private Customer customer;
 	public Order() {
 		
 	}
-	public Order(Long orderId, Date orderDate, String orderItem,Customer customer) {
+	public Order(String orderId, Date orderDate, String orderItem,Customer customer) {
 		super();
 		this.orderId = orderId;
 		this.orderDate = orderDate;
@@ -30,7 +36,7 @@ public class Order {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-	public Long getOrderId() {
+	public String getOrderId() {
 		return orderId;
 	}
 }
